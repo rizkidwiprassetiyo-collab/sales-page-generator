@@ -65,8 +65,8 @@ Strict rules:
             'x-goog-api-key' => env('GEMINI_API_KEY'),
             'Content-Type' => 'application/json',
         ])
-            ->timeout(45)
-            ->retry(2, 1000)
+            ->connectTimeout(8)
+            ->timeout(18)
             ->post(
                 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent',
                 [
